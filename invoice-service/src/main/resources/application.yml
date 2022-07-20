@@ -9,10 +9,10 @@ server:
 
 #datasource conf
 spring.datasource:
-  url: jdbc:mysql://localhost:3306/invoice_service
-  driver-class-name: com.mysql.cj.jdbc.Driver
-  username: root
-  password: 0123456789
+  url: jdbc:postgresql://localhost:5432/invoice_service
+  driver-class-name: org.postgresql.Driver
+  username: postgres
+  password: 45678
 
 #jpa - hibernate conf
 spring.jpa:
@@ -21,7 +21,7 @@ spring.jpa:
     format_sql: true
     validator:
       apply_to_ddl: true
-    dialect: org.hibernate.dialect.MySQL8Dialect
+    dialect: org.hibernate.dialect.PostgreSQL95Dialect
     globally_quoted_identifiers: true
   generate-ddl: true
   hibernate.ddl-auto: update
