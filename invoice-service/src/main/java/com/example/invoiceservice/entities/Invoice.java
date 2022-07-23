@@ -13,6 +13,7 @@ import java.util.Objects;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Table(name = "invoices")
 @Getter
 @Setter
 @ToString
@@ -26,7 +27,7 @@ public class Invoice {
     private BigDecimal debt;
 
     @NotNull
-    private Boolean isPaid;
+    private Boolean isPaid = false;
 
     private LocalDate date = LocalDate.now();
 

@@ -5,11 +5,14 @@ import org.hibernate.Hibernate;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import java.util.Objects;
 
-@javax.persistence.Entity
+@Entity
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Table(name = "clients")
 @NoArgsConstructor
 @Getter
 @Setter

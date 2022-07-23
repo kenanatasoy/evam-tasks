@@ -10,8 +10,9 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor
+@Table(name = "payments")
 @Getter
 @Setter
 @ToString
